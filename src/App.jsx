@@ -12,7 +12,7 @@ function App() {
           <img src={logo} className="App-logo" alt="logo" />
         </div>
         <div className="mdl-cell mdl-cell--8-col">
-          <p className="App-Dashboard">SALES DASHBOARD</p>
+          <h1 className="App-Dashboard">SALES DASHBOARD</h1>
         </div>
       </div>
       <div>
