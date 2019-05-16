@@ -1,6 +1,5 @@
-import 'bootstrap/dist/css/bootstrap.css';
-import 'material-design-lite/material.min.css';
 import 'material-design-lite';
+import 'material-design-lite/material.min.css';
 
 import './index.css';
 import React from 'react';
