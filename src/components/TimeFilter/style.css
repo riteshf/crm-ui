@@ -1,0 +1,14 @@
+.timeframe-tabs {
+    background:white;
+    justify-content: left !important;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: normal;
+    max-height: 50px;
+    padding-bottom: 20px;
+}
+
+
+.mdl-tabs.is-upgraded .mdl-tabs__tab.is-active:after {
+    background: "#2196F3" !important;
+}

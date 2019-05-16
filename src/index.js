@@ -1,4 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.css';
+import 'material-design-lite/material.min.css';
+import 'material-design-lite';
+
 import './index.css';
 import React from 'react';
 import ReactDOM from 'react-dom';

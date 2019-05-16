@@ -2,6 +2,8 @@ import React from "react";
 import logo from "./logo.png";
 import "./App.css";
 
+import TimeFilter from './components/TimeFilter'
+
 function App() {
   return (
     <div className="App">
@@ -12,6 +14,9 @@ function App() {
         <div className="offset-2 col-md-6">
           <p className="App-Dashboard">SALES DASHBOARD</p>
         </div>
+      </div>
+      <div>
+        <TimeFilter />
       </div>
     </div>
   );
