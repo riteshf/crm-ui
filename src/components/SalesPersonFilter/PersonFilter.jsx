@@ -1,14 +1,14 @@
 import "./style.css";
 import React, { useState } from "react";
 
-import InputLabel from "@material-ui/core/InputLabel";
-import MenuItem from "@material-ui/core/MenuItem";
-import FormControl from "@material-ui/core/FormControl";
-import Select from "@material-ui/core/Select";
+import { InputLabel, MenuItem, FormControl, Select } from "@material-ui/core";
 
 function PersonFilter(props) {
   const [employeeName, setEmployeeName] = useState(props.employees[0]);
 
+  React.useEffect(() => {
+    props.changeSelectedEmployee(employeeName);
+  }, [employeeName]);
   return (
     <div className="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
       <div className="mdl-tabs__tab-bar personFilter-tabs">

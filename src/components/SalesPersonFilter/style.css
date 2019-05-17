@@ -1,3 +1,13 @@
+.personFilter-tabs {
+  background: white;
+  justify-content: left !important;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: normal;
+  max-height: 50px;
+  margin-bottom: 20px;
+}
+
 .performance-tabs {
   background: white;
   font-family: Roboto;
@@ -6,7 +16,7 @@
   max-height: 50px;
   margin-bottom: 20px;
 }
-.timeframe-tabs a {
+.performance-tabs a {
   text-decoration: none;
 }
 

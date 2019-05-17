@@ -9,6 +9,7 @@ function TopBottomFilter(props) {
 
   const getCSSAsPerIsActive = name => {
     if (isActive(name)) {
+      props.show(name)
       return {
         color: "#2196F3"
       };
