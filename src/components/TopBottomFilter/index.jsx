@@ -22,7 +22,7 @@ function TopBottomFilter(props) {
 
   return (
     <div className="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
-      <div className="mdl-tabs__tab-bar timeframe-tabs">
+      <div className="mdl-tabs__tab-bar performance-tabs ">
         <a
           href="#top"
           className={"mdl-tabs__tab is-active"}

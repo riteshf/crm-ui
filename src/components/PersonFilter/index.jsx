@@ -12,11 +12,15 @@ function PersonFilter(props) {
   return (
     <div className="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
       <div className="mdl-tabs__tab-bar personFilter-tabs">
-        <form className={props.root} autoComplete="off">
+        <form
+          className={props.root}
+          autoComplete="off"
+          style={{ paddingLeft: "10px" }}
+        >
           <FormControl className={props.formControl}>
-            <InputLabel htmlFor="aemployee-name">Sales Person</InputLabel>
+            <InputLabel htmlFor="employee-name">Sales Person</InputLabel>
             <Select
-              style={{ width: "150px", textAlign: 'center' }}
+              style={{ width: "150px", textAlign: "center" }}
               value={employeeName}
               onChange={() => setEmployeeName(employeeName)}
               inputProps={{
