@@ -1,14 +1,12 @@
 import "./style.css";
 import React, { useState } from "react";
 
-function Projects() {
+const TimeFilter = props => {
   const [activeTab, setActiveTab] = useState("today");
-  const isActive = name => {
-    return activeTab === name ? "is-active" : null;
-  };
 
   const getCSSAsPerIsActive = name => {
     if (isActive(name)) {
+      props.changeTimeFilter(name);
       return {
         color: "#2196F3"
       };
@@ -18,7 +16,11 @@ function Projects() {
         opacity: 0.5
       };
     }
+    
   };
+
+  const isActive = name =>  activeTab === name ? "is-active" : null;
+
   return (
     <div className="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
       <div className="mdl-tabs__tab-bar timeframe-tabs">
@@ -63,24 +65,13 @@ function Projects() {
           THIS YEAR
         </a>
       </div>
-
-      <div className={"mdl-tabs__panel is-active"} id="today">
-        today
-      </div>
-      <div className={"mdl-tabs__panel"} id="lastweek">
-        lastweek
-      </div>
-      <div className={"mdl-tabs__panel"} id="lastmonth">
-        lastmonth
-      </div>
-      <div className={"mdl-tabs__panel"} id="thisquater">
-        thisquater
-      </div>
-      <div className={"mdl-tabs__panel"} id="thisyear">
-        thisyear
-      </div>
+      <div className={"mdl-tabs__panel is-active"} id="today"> </div>
+      <div className={"mdl-tabs__panel"} id="lastweek"> </div>
+      <div className={"mdl-tabs__panel"} id="lastmonth"> </div>
+      <div className={"mdl-tabs__panel"} id="thisquater"> </div>
+      <div className={"mdl-tabs__panel"} id="thisyear"> </div>
     </div>
   );
-}
+};
 
-export default Projects;
+export default TimeFilter;
