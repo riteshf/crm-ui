@@ -1,1 +1,9 @@
-
+.personFilter-tabs {
+    background: white;
+    justify-content: left !important;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: normal;
+    max-height: 50px;
+    margin-bottom: 20px;
+  }
