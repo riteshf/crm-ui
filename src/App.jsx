@@ -1,5 +1,6 @@
 import React from "react";
-import logo from "./logo.png";
+import logo from "./img/logo.png";
+import funnel from "./img/funnel.png";
 import "./App.css";
 
 import TimeFilter from "./components/TimeFilter";
@@ -40,6 +41,7 @@ function App() {
         />
       </div>
       <div className="chartsAndCards" />
+        <img src={funnel}></img>
     </div>
   );
 }
