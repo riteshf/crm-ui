@@ -1,0 +1,10 @@
+.app-dashboard img {
+    vertical-align: middle;
+}
+
+.app-dashboard .dashboard-name {
+    text-align: right;
+    font-size: 48px;
+    font-weight: 250;
+    color: #231f20;
+}

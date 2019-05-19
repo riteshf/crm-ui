@@ -1,11 +1,9 @@
-import 'material-design-lite';
-import 'material-design-lite/material.min.css';
-
-import './index.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
+
+import './index.css';
+import App from './App';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

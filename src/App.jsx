@@ -1,49 +1,81 @@
 import React from "react";
-import logo from "./img/logo.png";
-import funnel from "./img/funnel.png";
-import "./App.css";
+import {Grid} from "@material-ui/core";
 
-import TimeFilter from "./components/TimeFilter";
-import SalesPersonFilter from "./components/SalesPersonFilter";
+import "./App.css";
+import {
+    Header,
+    TabsFilter,
+    SalesPersonFilter,
+    GraphAndCards
+} from "./components";
+
+const timeFrames = [
+    "TODAY",
+    "LAST WEEK",
+    "LAST MONTH",
+    "THIS QUATER",
+    "THIS YEAR"
+];
 
 function App() {
-  const changeTimeFilter = newTimeRange => {
-    console.log("new Range", newTimeRange);
-  };
+    const changeTimeFilter = newTimeRange => {
+        console.log("new Range", newTimeRange);
+    };
 
-  const changeSelectedEmployee = selectedEmplyee => {
-    console.log("selected Employee is", selectedEmplyee);
-  };
+    const changeSelectedEmployee = selectedEmplyee => {
+        console.log("selected Employee is", selectedEmplyee);
+    };
 
-  const show = showEmployee => {
-    console.log("show", showEmployee, "Employee");
-  };
+    const show = showEmployee => {
+        console.log("show", showEmployee, "Employee");
+    };
 
-  const employees = ["All Sales Person", "E1"];
-  return (
-    <div className="App">
-      <div className="Header mdl-grid">
-        <div className="mdl-cell mdl-cell--4-col">
-          <img src={logo} className="App-logo" alt="logo" />
-        </div>
-        <div className="mdl-cell mdl-cell--8-col">
-          <h1 className="App-Dashboard">SALES DASHBOARD</h1>
-        </div>
-      </div>
-      <div className="TimeFilter">
-        <TimeFilter changeTimeFilter={changeTimeFilter} />
-      </div>
-      <div className="salesPersonFilter">
-        <SalesPersonFilter
-          employees={employees}
-          changeSelectedEmployee={changeSelectedEmployee}
-          show={show}
-        />
-      </div>
-      <div className="chartsAndCards" />
-        <img src={funnel}></img>
-    </div>
-  );
+    const employees = ["All Sales Person", "E1"];
+    const employeeInfos = [
+        {
+            image: "img/ico-calls.png",
+            about: "CALLS",
+            total: "15",
+            current: "10"
+        },
+        {
+          image: "img/ico-calls.png",
+          about: "WINS",
+          total: "1",
+          current: "3"
+      },
+      {
+        image: "img/ico-calls.png",
+        about: "INCREMENED REVENUE",
+        total: "80k",
+        current: "100k"
+    }
+    ];
+    const data = {
+        employeeInfos: employeeInfos
+    };
+    return (
+        <>
+            <Grid
+                className="app-dashboard"
+                container
+                spacing={0}
+                direction="row">
+                <Header />
+                <TabsFilter
+                    changeOption={changeTimeFilter}
+                    options={timeFrames}
+                />
+                <SalesPersonFilter
+                    changeSelectedEmployee={changeSelectedEmployee}
+                    employees={employees}
+                    data={data}
+                    show={show}
+                />
+                {/* <GraphAndCards data={data} /> */}
+            </Grid>
+        </>
+    );
 }
 
 export default App;

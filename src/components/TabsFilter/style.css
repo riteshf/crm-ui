@@ -1,0 +1,10 @@
+.app-dashboard .option-filter {
+    background: white;
+    width: 100%;
+    max-height: 50px;
+    font-size: 14px;
+}
+
+.MuiPrivateTabIndicator-colorSecondary-160 {
+    background: #2196f3 !important;
+}

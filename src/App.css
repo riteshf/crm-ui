@@ -1,24 +1,6 @@
-.App {
-  padding-left: 80px;
-  padding-right: 80px;
-}
-.Header {
-  height: 130px;
-  padding-top: 30px;
-}
-
-.App-Dashboard {
-  margin-top: 2px;
-  text-align: right;
-  font-weight: 300;
-  color: #231F20;
-}
-
-.TimeFilter {
-  margin-bottom: 20px;
-}
-
-
-.salesPersonFilter {
-  padding-top: 0px !important;
+.app-dashboard {
+    padding-left: 80px;
+    padding-right: 80px;
+    height: 130px;
+    line-height: 130px;
 }

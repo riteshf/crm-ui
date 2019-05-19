@@ -1,38 +1,46 @@
 import React from "react";
-import TopBottomFilter from "./TopBottomFilter";
+import {Grid} from "@material-ui/core";
+
 import PersonFilter from "./PersonFilter";
+import funnel from "../../img/funnel.png";
+import EmployeeCards from "../EmployeeCards";
+
+import TabsFilter from "../TabsFilter";
+const options = ["TOP", "BOTTOM"];
 
 const SalesPersonFilter = props => {
-  return (
-    <div
-      className="mdl-grid"
-      style={{ paddingTop: "0px", paddingRight: "0px" }}
-    >
-      <div
-        className="mdl-cell mdl-cell--10-col"
-        style={{
-          marginLeft: "-8px",
-          marginRight: "20px",
-          marginTop: "0px"
-        }}
-      >
-        <PersonFilter
-          employees={props.employees}
-          changeSelectedEmployee={props.changeSelectedEmployee}
-        />
-      </div>
-      <div
-        className="mdl-cell mdl-cell--2-col"
-        style={{
-          marginRight: "-8px",
-          marginLeft: "20px",
-          marginTop: "0px"
-        }}
-      >
-        <TopBottomFilter show={props.show} />
-      </div>
-    </div>
-  );
+    const changeOption = newTimeRange => {
+        console.log("new Range", newTimeRange);
+    };
+
+    return (
+        <>
+            <Grid
+                container
+                spacing={0}
+                style={{marginTop: "20px", maxHeight: "50px"}}>
+                <Grid item xs={9} style={{paddingRight: "20px"}}>
+                    <PersonFilter
+                        employees={props.employees}
+                        changeSelectedEmployee={props.changeSelectedEmployee}
+                    />
+                    <Grid
+                        container
+                        spacing={0}
+                        style={{marginTop: "20px"}}
+                        direction="row">
+                        <img src={funnel} style={{maxWidth: "100%"}} />
+                        <EmployeeCards
+                            employeeInfos={props.data.employeeInfos}
+                        />
+                    </Grid>
+                </Grid>
+                <Grid item xs={3} style={{paddingLeft: "20px"}}>
+                    <TabsFilter options={options} changeOption={changeOption} />
+                </Grid>
+            </Grid>
+        </>
+    );
 };
 
 export default SalesPersonFilter;
