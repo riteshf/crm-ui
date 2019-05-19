@@ -2,12 +2,7 @@ import React from "react";
 import {Grid} from "@material-ui/core";
 
 import "./App.css";
-import {
-    Header,
-    TabsFilter,
-    SalesPersonFilter,
-    GraphAndCards
-} from "./components";
+import {Header, TabsFilter, SalesPersonFilter} from "./components";
 
 const timeFrames = [
     "TODAY",
@@ -39,17 +34,17 @@ function App() {
             current: "10"
         },
         {
-          image: "img/ico-calls.png",
-          about: "WINS",
-          total: "1",
-          current: "3"
-      },
-      {
-        image: "img/ico-calls.png",
-        about: "INCREMENED REVENUE",
-        total: "80k",
-        current: "100k"
-    }
+            image: "img/ico-calls.png",
+            about: "WINS",
+            total: "1",
+            current: "3"
+        },
+        {
+            image: "img/ico-calls.png",
+            about: "INCREMENED REVENUE",
+            total: "80k",
+            current: "100k"
+        }
     ];
     const data = {
         employeeInfos: employeeInfos

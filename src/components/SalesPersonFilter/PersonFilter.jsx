@@ -12,9 +12,11 @@ import {
 function PersonFilter(props) {
     const [employeeName, setEmployeeName] = useState(props.employees[0]);
 
-    React.useEffect(() => {
+    const changeSelectedEmployee = employeeName => {
+        setEmployeeName(employeeName);
         props.changeSelectedEmployee(employeeName);
-    }, [employeeName]);
+    };
+    
     return (
         <>
             <Grid
@@ -33,7 +35,9 @@ function PersonFilter(props) {
                         <Select
                             style={{width: "150px", textAlign: "center"}}
                             value={employeeName}
-                            onChange={() => setEmployeeName(employeeName)}
+                            onChange={() =>
+                                changeSelectedEmployee(employeeName)
+                            }
                             inputProps={{
                                 name: "All Sales Person",
                                 id: "employee-name"

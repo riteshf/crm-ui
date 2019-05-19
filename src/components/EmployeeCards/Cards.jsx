@@ -6,9 +6,10 @@ const Cards = props => (
     <Grid
         container
         direction="column"
-        spacing={0}>
+        spacing={10}>
+
         {props.employeeInfos.map((employeeInfo, i) => (
-            <Card key={i} employeeInfo={employeeInfo} style={{marginBottom: "40px", maxWidth: '150px'}} />
+            <Card key={i} employeeInfo={employeeInfo} style={{marginBottom: '20px'}}/>
         ))}
     </Grid>
 );
