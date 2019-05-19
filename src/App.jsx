@@ -28,19 +28,19 @@ function App() {
     const employees = ["All Sales Person", "E1"];
     const employeeInfos = [
         {
-            image: "img/ico-calls.png",
+            image: "/img/ico-calls.png",
             about: "CALLS",
             total: "15",
             current: "10"
         },
         {
-            image: "img/ico-calls.png",
+            image: "/img/ico-calls.png",
             about: "WINS",
             total: "1",
             current: "3"
         },
         {
-            image: "img/ico-calls.png",
+            image: "/img/ico-calls.png",
             about: "INCREMENED REVENUE",
             total: "80k",
             current: "100k"

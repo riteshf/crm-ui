@@ -45,7 +45,7 @@ const SalesPersonFilter = props => {
                 </Grid>
                 <Grid item xs={3} style={{paddingLeft: "20px"}}>
                     <TabsFilter options={options} changeOption={changeOption} />
-                    <Grid container spacing={2} style={{marginTop: "40px"}}>
+                    <Grid container spacing={0} style={{marginTop: "40px"}}>
                         <EmployeeCards
                             employeeInfos={props.data.employeeInfos}
                         />
